@@ -33,7 +33,7 @@
             "metadata": {
                 "description": "The size of the RDSH virtual machines"
             },
-            "defaultValue": "Standard_A2"
+            "defaultValue": "Standard_D11_V2_PROMO"
         },
         "userLogoffTimeoutInMinutes": {
             "type": "int",

@@ -57,8 +57,6 @@
     "rdshVmSize": {
       "type": "string",
       "allowedValues": [
-        "Standard_A0",
-        "Standard_A1_v2",
         "Standard_A2_v2",
         "Standard_A4_v2",
         "Standard_D11_v2_promo",
@@ -70,12 +68,12 @@
       "metadata": {
         "description": "The size of the RDSH VMs"
       },
-      "defaultValue": "Standard_A4"
+      "defaultValue": "Standard_D11_v2_promo"
     }
   },
   "variables": {
     "adAssetLocation": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/ad-non-ha",
-    "adVMSize": "Standard_A1",
+    "adVMSize": "Standard_A2_v2",
     "adVnetName": "[concat('ADVNET',resourceGroup().name)]",
     "adSubnetName": "[concat('ADStaticSubnet',resourceGroup().name)]",
     "vnetID": "[resourceId('Microsoft.Network/virtualNetworks', variables('adVnetName'))]",
@@ -608,7 +606,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "Standard_A2"
+          "vmSize": "Standard_A2_v2"
         },
         "availabilitySet": {
           "id": "[resourceId('Microsoft.Compute/availabilitySets', 'gw-availabilityset')]"
@@ -774,7 +772,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "Standard_A2"
+          "vmSize": "Standard_A2_v2"
         },
         "availabilitySet": {
           "id": "[resourceId('Microsoft.Compute/availabilitySets', 'cb-availabilityset')]"
